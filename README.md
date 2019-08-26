@@ -17,26 +17,26 @@ Customized components can also use props, i;e: Our own components can also use p
 	import React, { Component } from 'react';
 	import { AppRegistry, Text, View } from 'react-native';
 
-			class Greeting extends Component {
-				render() {
-					return (
-						<View style={{alignItems: 'center'}}>
-							<Text>Hello {this.props.name}!</Text>
-						</View>
-					);
-				}
+		class Greeting extends Component {
+			render() {
+				return (
+					<View style={{alignItems: 'center'}}>
+						<Text>Hello {this.props.name}!</Text>
+					</View>
+				);
 			}
+		}
 
-			export default class LotsOfGreetings extends Component {
-				render() {
-					return (
-						<View style={{alignItems: 'center', top: 50}}>
-							<Greeting name='Rexxar' />
-							<Greeting name='Jaina' />
-							<Greeting name='Valeera' />
-						</View>
-					);
-				}
+		export default class LotsOfGreetings extends Component {
+			render() {
+				return (
+					<View style={{alignItems: 'center', top: 50}}>
+						<Greeting name='Rexxar' />
+						<Greeting name='Jaina' />
+						<Greeting name='Valeera' />
+					</View>
+				);
 			}
+		}
 			
 Here, making a single component that can be used in many different places in the application, with slightly different properties in each place. Just refer to this.props in your render function, using name as a prop lets us customize the Greeting component, so that component cane be reused for each of the greetings. This example also uses the Greeting component in JSX, just like the built-in components.
